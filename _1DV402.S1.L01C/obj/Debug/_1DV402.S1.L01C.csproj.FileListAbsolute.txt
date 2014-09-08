@@ -1,0 +1,8 @@
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\bin\Debug\_1DV402.S1.L01C.exe.config
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\bin\Debug\_1DV402.S1.L01C.exe
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\bin\Debug\_1DV402.S1.L01C.pdb
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\obj\Debug\_1DV402.S1.L01C.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\obj\Debug\_1DV402.S1.L01C.Properties.Resources.resources
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\obj\Debug\_1DV402.S1.L01C.csproj.GenerateResource.Cache
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\obj\Debug\_1DV402.S1.L01C.exe
+C:\Users\Erik\Documents\GitHub\1dv402-eh222ve-1-1-vaxelpengar\_1DV402.S1.L01C\obj\Debug\_1DV402.S1.L01C.pdb

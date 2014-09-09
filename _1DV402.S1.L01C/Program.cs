@@ -54,7 +54,6 @@ namespace _1DV402.S1.L01C
 
         static double ReadPositiveDouble(string message)
         {
-            bool inputValid = false;
             double inputNumber = 0;
 
             do
@@ -71,53 +70,47 @@ namespace _1DV402.S1.L01C
                     inputNumber = Math.Round(inputNumber, 2);
                     double inputToCheck = Math.Round(inputNumber, 0);
 
-                    if (inputToCheck > 0)
+                    if (inputToCheck < 1)
                     {
-                        inputValid = true;
+                        throw new ArgumentOutOfRangeException();
                     }
-                    else
-                    {
-                        throw new InvalidOperationException();
-                    }
+                    break;
                 }
                 catch
                 {
                     ViewMessage(Resources.invalidPositiveDouble, true);
                 }
 
-            } while (inputValid == false);
+            } while (true);
             return inputNumber;
         }
 
         static uint ReadUint(string message, double lowestAmount)
         {
-            bool inputValid = false;
             uint inputNumber = 0;
 
             do
             {
-                Console.Write(message);
-                string input = Console.ReadLine();
                 try
                 {
+                    Console.Write(message);
+                    string input = Console.ReadLine();
+
                     //Catches any NaN inputs
                     inputNumber = Convert.ToUInt32(input);
 
                     //Checks if valid amount
-                    if (inputNumber >= lowestAmount)
+                    if (inputNumber < lowestAmount)
                     {
-                        inputValid = true;
+                        throw new ArgumentOutOfRangeException();
                     }
-                    else
-                    {
-                        throw new InvalidOperationException();
-                    }
+                    break;
                 }
                 catch
                 {
                     ViewMessage(Resources.invalidPayment, true);
                 }
-            } while (inputValid == false);
+            } while (true);
             return inputNumber;
         }
 
@@ -159,16 +152,16 @@ namespace _1DV402.S1.L01C
 
             Console.WriteLine();
             Console.WriteLine("Receipt");
-            Console.WriteLine("* * * * * * * * * * * * * * * *");
-            Console.WriteLine("Subtotal:\t\t{0,5}kr", subtotal);
-            Console.WriteLine("Rounding off:\t\t{0,5}kr", roundingOffAmount);
-            Console.WriteLine("Total:\t\t\t{0,5}kr", total);
-            Console.WriteLine("Received payment:\t{0,5}kr", paid);
-            Console.WriteLine("Change:\t\t\t{0,5}kr", change);
-            Console.WriteLine("* * * * * * * * * * * * * * * *");
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine(" * * * * * * * * * * * * * * * * *");
+            Console.WriteLine("Subtotal:\t\t{0,10:c2}", subtotal);
+            Console.WriteLine("Rounding off:\t\t{0,10:c2}", roundingOffAmount);
+            Console.WriteLine("Total:\t\t\t{0,10:c0}", total);
+            Console.WriteLine("Received payment:\t{0,10:c0}", paid);
+            Console.WriteLine("Change:\t\t\t{0,10:c0}", change);
+            Console.WriteLine(" * * * * * * * * * * * * * * * * *");
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Value\t|\t#");
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine("----------------------------------");
             for (int i = 0; i < denominations.Length; i++)
             {
                 if (notes[i] > 0)
